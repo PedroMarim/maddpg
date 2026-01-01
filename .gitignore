@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# Training outputs
+runs/
+
+# OS junk
+.DS_Store
+Thumbs.db
