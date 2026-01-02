@@ -2,7 +2,7 @@ from maddpg.envs.mpe_make import make_mpe_env
 
 
 def main():
-    env = make_mpe_env("simple_spread", discrete_action_input=True)
+    env = make_mpe_env("simple_adversary", discrete_action_input=True)
 
     env.discrete_action_input = True
     obs_n = env.reset()
