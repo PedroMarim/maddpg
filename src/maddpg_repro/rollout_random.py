@@ -1,7 +1,7 @@
 import numpy as np
 
-from maddpg.envs.mpe_make import make_mpe_env
-from maddpg.alg.replay_buffer import ReplayBuffer
+from maddpg_repro.envs.mpe_make import make_mpe_env
+from maddpg_repro.alg.replay_buffer import ReplayBuffer
 
 
 def sample_actions_discrete(env):

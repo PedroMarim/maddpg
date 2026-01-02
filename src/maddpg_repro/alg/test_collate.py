@@ -1,5 +1,5 @@
 import numpy as np
-from maddpg.alg.collate import pad_and_concat_obs, actions_to_onehot
+from maddpg_repro.alg.collate import pad_and_concat_obs, actions_to_onehot
 
 
 def main():

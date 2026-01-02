@@ -1,5 +1,5 @@
 import numpy as np
-from maddpg.alg.replay_buffer import ReplayBuffer
+from maddpg_repro.alg.replay_buffer import ReplayBuffer
 
 
 def main():

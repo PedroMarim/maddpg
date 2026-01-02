@@ -1,4 +1,4 @@
-from maddpg.envs.mpe_make import make_mpe_env
+from maddpg_repro.envs.mpe_make import make_mpe_env
 
 
 def main():

@@ -1,8 +1,8 @@
 import numpy as np
 import torch
 
-from maddpg.alg.collate import pad_and_concat_obs, actions_to_onehot
-from maddpg.alg.networks import CentralizedCritic
+from maddpg_repro.alg.collate import pad_and_concat_obs, actions_to_onehot
+from maddpg_repro.alg.networks import CentralizedCritic
 
 
 def main():

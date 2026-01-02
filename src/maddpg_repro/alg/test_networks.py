@@ -1,5 +1,5 @@
 import torch
-from maddpg.alg.networks import (
+from maddpg_repro.alg.networks import (
     DiscreteActor,
     gumbel_softmax_sample,
     select_discrete_action,
