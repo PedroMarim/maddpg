@@ -42,6 +42,27 @@ class DiscreteActor(nn.Module):
         return self.mlp(obs)
 
 
+class CentralizedCritic(nn.Module):
+    """
+    Centralized critic for agent i:
+    input: concat([x, a_all]) where
+      x: (B, N*max_obs_dim)
+      a_all: (B, N*num_actions) (one-hot or soft one-hot)
+    output: Q-value (B, 1)
+    """
+
+    def __init__(
+        self, x_dim: int, a_dim: int, hidden_dims: list[int] = [256, 256]
+    ):
+        super().__init__()
+        self.in_dim = x_dim + a_dim
+        self.q = MLP(self.in_dim, hidden_dims, out_dim=1)
+
+    def forward(self, x: torch.Tensor, a_all: torch.Tensor) -> torch.Tensor:
+        z = torch.cat([x, a_all], dim=-1)
+        return self.q(z)
+
+
 def gumbel_softmax_sample(
     logits: torch.Tensor,
     tau: float = 1.0,

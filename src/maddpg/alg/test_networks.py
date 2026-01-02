@@ -29,7 +29,7 @@ def main():
     a_int = select_discrete_action(actor_adv, obs_adv, explore=True)
     print("env action int:", a_int)
 
-    print("✅ networks test ok")
+    print("networks test ok")
 
 
 if __name__ == "__main__":
