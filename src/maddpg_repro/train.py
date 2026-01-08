@@ -46,6 +46,10 @@ def sample_action_int_from_actor(
     - explore=True: epsilon-greedy on top of logits sampling
     """
     obs_t = torch.from_numpy(obs_i.astype(np.float32))
+
+    device = next(actor.parameters()).device
+    obs_t = obs_t.to(device)
+
     with torch.no_grad():
         logits = actor(obs_t.unsqueeze(0)).squeeze(0)  # (A,)
         if explore and np.random.rand() < eps:
