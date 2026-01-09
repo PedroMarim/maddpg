@@ -69,7 +69,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--scenario", type=str, default="simple_adversary")
     parser.add_argument("--seed", type=int, default=0)
-    parser.add_argument("--steps", type=int, default=50_000)
+    parser.add_argument("--steps", type=int, default=500_000)
     parser.add_argument("--episode_len", type=int, default=25)
     parser.add_argument("--buffer_size", type=int, default=200_000)
     parser.add_argument("--batch_size", type=int, default=1024)
